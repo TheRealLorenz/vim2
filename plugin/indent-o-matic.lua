@@ -7,9 +7,7 @@ require('indent-o-matic').setup {
   standard_widths = { 2, 4, 8 },
 }
 
-vim.keymap.set(
-  'n',
-  '<leader>i',
-  '<cmd>IndentOMatic<cr>',
-  { desc = 'Detect Indent' }
-)
+vim.keymap.set('n', '<leader>i', function()
+  vim.notify 'Reload indents'
+  vim.cmd [[IndentOMatic]]
+end, { desc = 'Detect Indent' })
