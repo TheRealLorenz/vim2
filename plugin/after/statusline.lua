@@ -5,7 +5,7 @@ local M = {}
 ---@param hl string highlight group
 ---@return string
 M.set_hl = function(s, hl)
-  return string.format('%%#%s#%s%%#%s#', hl, s, 'StatusLine')
+  return string.format('%%#%s#%s%%*', hl, s)
 end
 
 M.git = function()
@@ -19,7 +19,7 @@ M.git = function()
     or ''
   return M.set_hl(
     string.format(' %s%s ', vim.b.gitsigns_head, status),
-    'GitSignsChange'
+    'Added'
   )
 end
 
