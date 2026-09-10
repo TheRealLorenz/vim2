@@ -19,7 +19,7 @@ opt.mouse = 'a'
 opt.number = true
 opt.scrolloff = 10
 opt.shiftwidth = 4
-opt.signcolumn = 'number'
+opt.signcolumn = 'yes'
 opt.smartcase = true
 opt.smartindent = true
 opt.softtabstop = 4
@@ -31,7 +31,6 @@ opt.undofile = true
 opt.updatetime = 250
 opt.winborder = 'rounded'
 
--- opt.number = true
 -- opt.laststatus = 3
 
 vim.diagnostic.config {

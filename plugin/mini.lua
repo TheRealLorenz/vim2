@@ -123,7 +123,21 @@ vim.keymap.set('n', '<leader>?', extra.pickers.commands, { desc = 'Commands' })
 vim.keymap.set('n', '<leader>h', picker.builtin.help, { desc = 'Help' })
 
 -- mini.surround
-require('mini.surround').setup()
+local surround = require 'mini.surround'
+surround.setup {
+  custom_surroundings = {
+    ['c'] = {
+      input = { '\\%a+%b{}', '^.-%{().*()%}$' },
+      output = function()
+        local cmd_name = surround.user_input 'Command name'
+        if cmd_name == nil then
+          return nil
+        end
+        return { left = ('\\%s{'):format(cmd_name), right = '}' }
+      end,
+    },
+  },
+}
 
 -- mini.tabline
 require('mini.tabline').setup()

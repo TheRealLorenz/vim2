@@ -8,15 +8,16 @@ conform.setup {
   formatters_by_ft = {
     c = { 'clang-format' },
     cpp = { 'clang-format' },
+    css = { 'prettierd' },
+    javascript = { 'prettierd' },
+    javascriptreact = { 'prettierd' },
+    json = { 'prettierd' },
+    latex = { 'latexindent' },
     lua = { 'stylua' },
     python = { 'black' },
-    javascript = { 'prettierd' },
-    typescript = { 'prettierd' },
-    javascriptreact = { 'prettierd' },
-    typescriptreact = { 'prettierd' },
-    css = { 'prettierd' },
     rust = { 'rustfmt' },
-    json = { 'prettierd' },
+    typescript = { 'prettierd' },
+    typescriptreact = { 'prettierd' },
   },
 }
 

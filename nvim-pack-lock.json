@@ -55,6 +55,10 @@
     "typst-preview.nvim": {
       "rev": "87db18b8d19c8b0eed399f52e4c527ce5afe4817",
       "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "vimtex": {
+      "rev": "cb81778aee678b513af3de7f1ca5943e7ee31b2f",
+      "src": "https://github.com/lervag/vimtex"
     }
   }
 }
