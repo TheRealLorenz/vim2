@@ -107,7 +107,11 @@ local picker = require 'mini.pick'
 
 local extra = require 'mini.extra'
 
-picker.setup()
+picker.setup {
+  mappings = {
+    choose_marked = '<C-q>',
+  },
+}
 
 vim.ui.select = picker.ui_select
 
