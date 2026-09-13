@@ -13,6 +13,7 @@ opt.cursorline = true
 opt.expandtab = true
 opt.ignorecase = true -- Unless \C
 opt.inccommand = 'split'
+opt.laststatus = 3
 opt.list = true
 opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 opt.mouse = 'a'
@@ -30,8 +31,6 @@ opt.timeoutlen = 300
 opt.undofile = true
 opt.updatetime = 250
 opt.winborder = 'rounded'
-
--- opt.laststatus = 3
 
 vim.diagnostic.config {
   signs = {
