@@ -11,3 +11,18 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = '*',
+  callback = function(args)
+    -- silently skips filetypes with no parser
+    local ok, _ = pcall(vim.treesitter.start, args.buf)
+    if ok then
+      -- folds
+      -- vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+      -- vim.wo[0][0].foldmethod = 'expr'
+      -- indent (experimental)
+      vim.bo.indentexpr = 'v:lua.require\'nvim-treesitter\'.indentexpr()'
+    end
+  end,
+})
