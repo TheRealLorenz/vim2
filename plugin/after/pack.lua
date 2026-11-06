@@ -44,6 +44,11 @@ local subcommands = {
     end,
     complete = plugin_names,
   },
+  sync = {
+    run = function()
+      vim.pack.update(nil, { target = 'lockfile' })
+    end,
+  },
 }
 
 local sorted_names = vim.tbl_keys(subcommands)
